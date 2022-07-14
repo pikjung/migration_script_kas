@@ -27,7 +27,7 @@ ALTER TABLE IF EXISTS c_project_header_v ADD COLUMN IF NOT EXISTS c_bp_location_
 -- c_project_header_vt
 ALTER TABLE IF EXISTS c_project_header_vt ADD COLUMN IF NOT EXISTS c_bp_location_name CHARACTER VARYING(300) NULL;
 -- isy_timesheet
-CREATE TABLE isy_timesheet (
+CREATE TABLE IF NOT EXISTS isy_timesheet (
     ad_client_id NUMERIC(10,0) NOT NULL,
     ad_org_id NUMERIC(10,0) NOT NULL,
     ad_orgtrx_id NUMERIC(10,0) NULL,
