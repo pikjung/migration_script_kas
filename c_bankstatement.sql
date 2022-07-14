@@ -1,0 +1,1 @@
+ALTER TABLE c_bankstatement ADD COLUMN c_project_id NUMERIC(10,0) NULL;
