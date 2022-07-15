@@ -1,33 +1,33 @@
 -- c_bankstatement
-ALTER TABLE IF EXISTS c_bankstatement ADD COLUMN IF NOT EXISTS c_project_id NUMERIC(10,0) NULL DEFAULT NULL:numeric;
+ALTER TABLE IF EXISTS adempiere.c_bankstatement ADD COLUMN IF NOT EXISTS c_project_id NUMERIC(10,0) NULL DEFAULT NULL:numeric;
 -- c_bankstatementline
-ALTER TABLE IF EXISTS c_bankstatementline ADD COLUMN IF NOT EXISTS c_project_id NUMERIC(10,0) NULL DEFAULT NULL:numeric;
+ALTER TABLE IF EXISTS adempiere.c_bankstatementline ADD COLUMN IF NOT EXISTS c_project_id NUMERIC(10,0) NULL DEFAULT NULL:numeric;
 -- c_bpartner_location
-ALTER TABLE IF EXISTS c_bpartner_location ADD COLUMN IF NOT EXISTS name CHARACTER VARYING(300) NOT NULL DEFAULT '.'::character varying;
+ALTER TABLE IF EXISTS adempiere.c_bpartner_location ADD COLUMN IF NOT EXISTS name CHARACTER VARYING(300) NOT NULL DEFAULT '.'::character varying;
 -- c_dunning_header_v
-ALTER TABLE IF EXISTS c_dunning_header_v ADD COLUMN IF NOT EXISTS c_bpartner_location_name CHARACTER VARYING(300) NULL;
+ALTER TABLE IF EXISTS adempiere.c_dunning_header_v ADD COLUMN IF NOT EXISTS c_bpartner_location_name CHARACTER VARYING(300) NULL;
 -- c_dunning_header_vt
-ALTER TABLE IF EXISTS c_dunning_header_vt ADD COLUMN IF NOT EXISTS c_bpartner_location_name CHARACTER VARYING(300) NULL;
+ALTER TABLE IF EXISTS adempiere.c_dunning_header_vt ADD COLUMN IF NOT EXISTS c_bpartner_location_name CHARACTER VARYING(300) NULL;
 --  c_invoice
-ALTER TABLE IF EXISTS c_invoice ADD COLUMN IF NOT EXISTS approveddiscby CHARACTER VARYING(255) NULL;
+ALTER TABLE IF EXISTS adempiere.c_invoice ADD COLUMN IF NOT EXISTS approveddiscby CHARACTER VARYING(255) NULL;
 --  c_invoice_header_v
-ALTER TABLE IF EXISTS c_invoice_header_v ADD COLUMN IF NOT EXISTS bp_location_name CHARACTER VARYING(300) NULL;
+ALTER TABLE IF EXISTS adempiere.c_invoice_header_v ADD COLUMN IF NOT EXISTS bp_location_name CHARACTER VARYING(300) NULL;
 -- c_invoice_header_vt
-ALTER TABLE IF EXISTS c_invoice_header_vt ADD COLUMN IF NOT EXISTS bp_location_name CHARACTER VARYING(300) NULL;
+ALTER TABLE IF EXISTS adempiere.c_invoice_header_vt ADD COLUMN IF NOT EXISTS bp_location_name CHARACTER VARYING(300) NULL;
 -- c_invoicetax
-ALTER TABLE IF EXISTS c_invoicetax ADD COLUMN IF NOT EXISTS taxnbr CHARACTER VARYING(22) NULL DEFAULT NULL:character varying;
+ALTER TABLE IF EXISTS adempiere.c_invoicetax ADD COLUMN IF NOT EXISTS taxnbr CHARACTER VARYING(22) NULL DEFAULT NULL:character varying;
 -- c_order_header_v
-ALTER TABLE IF EXISTS c_order_header_v ADD COLUMN IF NOT EXISTS bp_location_name CHARACTER VARYING(300) NULL;
-ALTER TABLE IF EXISTS c_order_header_v ADD COLUMN IF NOT EXISTS bill_bp_location_name CHARACTER VARYING(300) NULL;
+ALTER TABLE IF EXISTS adempiere.c_order_header_v ADD COLUMN IF NOT EXISTS bp_location_name CHARACTER VARYING(300) NULL;
+ALTER TABLE IF EXISTS adempiere.c_order_header_v ADD COLUMN IF NOT EXISTS bill_bp_location_name CHARACTER VARYING(300) NULL;
 -- c_order_header_vt
-ALTER TABLE IF EXISTS c_order_header_vt ADD COLUMN IF NOT EXISTS bp_location_name CHARACTER VARYING(300) NULL;
-ALTER TABLE IF EXISTS c_order_header_vt ADD COLUMN IF NOT EXISTS bill_bp_location_name CHARACTER VARYING(300) NULL;
+ALTER TABLE IF EXISTS adempiere.c_order_header_vt ADD COLUMN IF NOT EXISTS bp_location_name CHARACTER VARYING(300) NULL;
+ALTER TABLE IF EXISTS adempiere.c_order_header_vt ADD COLUMN IF NOT EXISTS bill_bp_location_name CHARACTER VARYING(300) NULL;
 -- c_project_header_v
-ALTER TABLE IF EXISTS c_project_header_v ADD COLUMN IF NOT EXISTS c_bp_location_name CHARACTER VARYING(300) NULL;
+ALTER TABLE IF EXISTS adempiere.c_project_header_v ADD COLUMN IF NOT EXISTS c_bp_location_name CHARACTER VARYING(300) NULL;
 -- c_project_header_vt
-ALTER TABLE IF EXISTS c_project_header_vt ADD COLUMN IF NOT EXISTS c_bp_location_name CHARACTER VARYING(300) NULL;
+ALTER TABLE IF EXISTS adempiere.c_project_header_vt ADD COLUMN IF NOT EXISTS c_bp_location_name CHARACTER VARYING(300) NULL;
 -- isy_timesheet
-CREATE TABLE IF NOT EXISTS isy_timesheet (
+CREATE TABLE IF NOT EXISTS adempiere.isy_timesheet (
     ad_client_id NUMERIC(10,0) NOT NULL,
     ad_org_id NUMERIC(10,0) NOT NULL,
     ad_orgtrx_id NUMERIC(10,0) NULL,
@@ -47,4 +47,3 @@ CREATE TABLE IF NOT EXISTS isy_timesheet (
     user1_id NUMERIC(10,0) NOT NULL,
     user2_id NUMERIC(10,0) NOT NULL,
 );
-
